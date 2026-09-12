@@ -1,0 +1,42 @@
+{
+  "best_model": "xgboost",
+  "feature_columns": [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+    "WINTER_TOTAL",
+    "SUMMER_TOTAL",
+    "MONSOON_TOTAL",
+    "POST_MONSOON_TOTAL",
+    "ANNUAL_LAG1",
+    "ANNUAL_ROLLING5",
+    "YEAR"
+  ],
+  "metrics": {
+    "xgboost": {
+      "mae": 34.2625928795856,
+      "rmse": 46.5389619073169,
+      "r2": 0.9297058966289806,
+      "train_seconds": 0.088
+    },
+    "random_forest": {
+      "mae": 35.21508368621907,
+      "rmse": 49.46946462883716,
+      "r2": 0.9205745044919292,
+      "train_seconds": 0.287
+    }
+  },
+  "trained_at": "2026-09-12 09:52:09",
+  "n_train_rows": 91,
+  "n_test_rows": 23,
+  "random_state": 42
+}

@@ -1,0 +1,174 @@
+/* Vidarbha Rainfall Predictor — visual identity grounded in monsoon-season
+   Maharashtra: deep monsoon-sky slate, wet-earth ochre accent, and a single
+   confident serif for the headline against a clean grotesque for data/UI. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --sky: #26344a;        /* deep monsoon slate */
+  --sky-deep: #17202e;
+  --earth: #b5651d;      /* wet ochre / earth accent */
+  --earth-soft: #e8ddc7;
+  --paper: #f6f3ec;      /* damp paper */
+  --ink: #1c1f24;
+  --line: #d8d0bd;
+  --good: #2f6b4f;
+  --bad: #9c3b2c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+header h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  color: var(--sky-deep);
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  color: #52585f;
+  margin: 0 0 1.75rem;
+  max-width: 46ch;
+}
+
+.model-badge {
+  display: inline-block;
+  background: var(--sky);
+  color: var(--earth-soft);
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.alert {
+  padding: 0.9rem 1.1rem;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid;
+}
+
+.alert-error {
+  background: #f7e9e6;
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.alert-success {
+  background: #e7efe9;
+  border-color: var(--good);
+  color: var(--ink);
+}
+
+.big-number {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--good);
+  margin-top: 0.25rem;
+}
+
+.form-grid {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: #52585f;
+  margin-bottom: 0.35rem;
+}
+
+.field input {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--paper);
+}
+
+.field input:focus {
+  outline: 2px solid var(--earth);
+  outline-offset: 1px;
+}
+
+fieldset.months {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1rem 1.1rem 0.4rem;
+  margin: 0 0 1.25rem;
+}
+
+fieldset.months legend {
+  font-size: 0.85rem;
+  color: #52585f;
+  padding: 0 0.4rem;
+}
+
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.field.small input {
+  padding: 0.4rem 0.5rem;
+}
+
+button {
+  background: var(--earth);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover { background: #9a5419; }
+button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #7a7f85;
+}
+
+footer a { color: var(--sky); }
+footer code {
+  background: var(--earth-soft);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+}
+
+@media (max-width: 520px) {
+  .months-grid { grid-template-columns: repeat(2, 1fr); }
+}
